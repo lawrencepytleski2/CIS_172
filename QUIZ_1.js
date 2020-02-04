@@ -1,3 +1,14 @@
+/**
+ * Quiz 1 focuses on variables and control structures
+ *
+ * @category    Quiz 1
+ * @author      Chad Banks <crbanks1@hfcc.edu>
+ * @author      Law
+ * @date        2020.01.30
+ * @link
+ * @grade       10 / 10
+ */
+
 const favBook = 'The Shining';
 let favInt = "07";
 
@@ -17,20 +28,22 @@ else
 let b;
 for(b = 1; b <= 7; b++ )
 {
-    console.log("The Shining:", b);
+    console.log(favBook, b);
 }
 
-
+// -1 pt
 while (favInt <= -42 )
 {
     favInt--;
     console.log("Favorite Integer:", favInt);
-    if (favInt = 0)
+    if (favInt == 0) // Remember, one equal is an assignment. Two or three is a comparison.
     {
         console.log("ZERO DETECTED!")
     }
 }
 
+
+// +1/2 pts
 switch(favBook)
 {
     case 1:

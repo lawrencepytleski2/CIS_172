@@ -1,3 +1,14 @@
+/**
+ * HW 1 focuses on variables and control structures
+ *
+ * @category    HW 1
+ * @author      Chad Banks <crbanks1@hfcc.edu>
+ * @author      Law
+ * @date        2020.01.30
+ * @link
+ * @grade       10 / 10
+ */
+
 let myName = "Larry Pytleski";
 let myMajor = "Web Development";
 let funFact = "I play guitar";
