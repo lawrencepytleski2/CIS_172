@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://O:/HFC_S2/CIS_172/.idea/CIS_172.iml" filepath="O:/HFC_S2/CIS_172/.idea/CIS_172.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../cis-172-examples/.idea/cis-172-examples.iml" filepath="$PROJECT_DIR$/../cis-172-examples/.idea/cis-172-examples.iml" />
+    </modules>
+  </component>
+</project>
