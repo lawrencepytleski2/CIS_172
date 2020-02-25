@@ -5,8 +5,8 @@
  * @author      Chad Banks <crbanks1@hfcc.edu>
  * @author      LAWRENCE PYTLESKI <ljpytleski@hawkmail.hfcc.edu>
  * @date        2020.02.13
- * @link
-    */
+ * @grade       8.5 / 10
+ **/
 
 // 3 pts
 // 1. Define a function that take two arguments, you can choose the name.
@@ -20,13 +20,15 @@ function multiplyNumbers( num1, num2 )
 let total = multiplyNumbers( 4, 7 );
 
 
-// 2 pts
+// 1/2 pts
 // 2. Create a button with an id of multiply, with text that says "Multiple 4 and 7"
 //      Add an onclick event to this button that calls the function above, passing in 4 and 7.
 
-let button1 = document.getElementById("Multiply 4 and 7");
+// let button1 = document.getElementById("Multiply 4 and 7");
+// button1.addEventListener( "click", multiplyNumbers );
 
-button1.addEventListener( "click", multiplyNumbers );
+// This one should be in the HTML like this....
+// <button onclick="multiplyNumbers( 4, 7 );" >Multiple 4 and 7</button>
 
 
 // 2 pts
@@ -36,10 +38,10 @@ function showAlert() {
     alert ("Welcome!");
 }
 
-// 3 pts
+// 2.5/3 pts
 // 4. Create a button with an id of welcome, with text that says "Display Welcome"
 //      Add a JS created listener click event to this button that calls the welcome function above.
 
-let button2 = document.getElementById("Display Welcome");
+let button2 = document.getElementById("welcome");
 
 button2.addEventListener( "click", showAlert );
