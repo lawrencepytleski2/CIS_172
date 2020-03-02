@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>CIS 172 Calculator</title>
+</head>
+<body>
+<div class ="container">
+    <table border="1" cellspacing="0">
+        <tr>
+            <td colspan="4" id="inputLabel">0</td>
+        </tr>
+        <tr>
+            <td colspan="3"><button id="AC" style="width: 79px" onclick="pushButton();">AC</button></td>
+            <td><button id="/" style="width: 23px" onclick="pushButton('/');">/</button></td>
+        </tr>
+        <tr>
+            <td><button id="7" onclick="pushButton(7);">7</button></td>
+            <td><button id="8" onclick="pushButton(8);">8</button></td>
+            <td><button id="9" onclick="pushButton(9);">9</button></td>
+            <td><button id="*" style="width: 23px" onclick="pushButton('*');">*</button></td>
+        </tr>
+        <tr>
+            <td><button id="4" onclick="pushButton(4);">4</button></td>
+            <td><button id="5" onclick="pushButton(5);">5</button></td>
+            <td><button id="6" onclick="pushButton(6);">6</button></td>
+            <td><button id="-" style="width: 23px" onclick="pushButton('-');">-</button></td>
+        </tr>
+        <tr>
+            <td><button id="1" onclick="pushButton(1);">1</button></td>
+            <td><button id="2" onclick="pushButton(2);">2</button></td>
+            <td><button id="3" onclick="pushButton(3);">3</button></td>
+            <td><button id="+" onclick="pushButton('+');">+</button></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button id="0" style="width: 50px" onclick="pushButton(0);">0</button></td>
+            <td><button id="." style="width: 23px" onclick="pushButton('.');">.</button></td>
+            <td><button id="=" onclick="pushButton('=');">=</button></td>
+        </tr>
+    </table>
+</div>
+<script src="index.js" ></script>
+</body>
+</html>
