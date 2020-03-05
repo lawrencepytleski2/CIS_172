@@ -3,27 +3,22 @@
  *
  * @category    Quiz 3 Alt
  * @author      Chad Banks <crbanks1@hfcc.edu>
- * @author      LAWRENCE PYTLESKI <ljpytleski@hawkmail.hfcc.edu>
+ * @author      LAWRENCE PYTLESKI <ljjpytleski@hawkmail.hfcc.edu>
  * @date        2020.02.27
  * @grade
  */
 
-let FoodTruck ={}
-
-let FoodTruck =
-    {
-        Name:       FoodNameBox.value,
-        MPG:        FoodMPGBox.value,
-        FoodType:   FoodFoodTypeBox.value,
-        Sales:      FoodSalesBox.value,
-        Stops:      FoodStopsBox.value,
-        Employees:  FoodEmployeesBox.value
-    };
-
-function addStop()
+addStop = function ()
 {
+    let FoodTruck =
+        {
+            Name: "Lester's Taco Truck",
+            MPG: 20,
+            FoodType: "tacos",
+            Sales: 3000,
+            Stops: 12,
+            Employees: 4,
+        };
 
-}
-
-FoodTruck.push(addStop);
-console.log(addStop);
+    return Stops + 1;
+};
