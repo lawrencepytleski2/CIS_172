@@ -1,5 +1,12 @@
-
-
+/**
+ * CIS 172 Midterm
+ *
+ * @category    Midterm
+ * @author      Chad Banks <crbanks1@hfcc.edu>
+ * @author      LAWRENCE PYTLESKI <ljjpytleski@hawkmail.hfcc.edu>
+ * @date        2020.03.05
+ * @grade
+ */
 
 let Blueit = {
 
