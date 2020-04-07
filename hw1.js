@@ -3,7 +3,7 @@
  *
  * @category    HW 1
  * @author      Chad Banks <crbanks1@hfcc.edu>
- * @author      Law
+ * @author      Lester Lipinsky
  * @date        2020.01.30
  * @link
  * @grade       10 / 10

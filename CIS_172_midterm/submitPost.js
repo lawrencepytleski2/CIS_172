@@ -8,25 +8,20 @@
  * @grade
  */
 
-let SubmitHandler = {
+let submitHandler = {
 
-    handleNewButton() {
+    username: null,
+    post: null,
+    handleNewButton: function () {
 
-        let sweetButton = {};
+        let dateOfPost = new Date();
+        let newPost = {
+            userName: document.getElementById('username').value,
+            newPost: document.getElementById('post').value,
+            postDate: dateOfPost
+        };
 
-        sweetButton.id = document.getElementById('id').value;
-        sweetButton.message = document.getElementById('message').value;
+        main.sendNewPostToApi(newPost);
 
-        handleNewButton.push(sweetButton);
-        console.log(sweetButton);
-
-    sendNewPostToApi: function (handleNewButton)
-    {
-        $.ajax( Blueit.siteApiUrl, {action:"post", pid:buttonId, val:Value, data:handleNewButton} );
     }
-}
 };
-
-let sweetButtonBtn = document.getElementById("SubmitHandler");
-sweetButtonBtn.addEventListener( "click", SubmitHandler );
-
