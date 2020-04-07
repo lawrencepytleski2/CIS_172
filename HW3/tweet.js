@@ -1,3 +1,13 @@
+/**
+ * HW 3
+ *
+ * @category    HW 3
+ * @author      Chad Banks <crbanks1@hfcc.edu>
+ * @author      Lester Lipinsky
+ * @date        2020.04.07
+ * @grade       10 / 10
+ */
+
 let tweet = {};
 
 tweet.tweetCollection = [];
