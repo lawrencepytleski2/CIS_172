@@ -5,20 +5,23 @@
  * @author      Chad Banks <crbanks1@hfcc.edu>
  * @author      LAWRENCE PYTLESKI <ljjpytleski@hawkmail.hfcc.edu>
  * @date        2020.02.27
- * @grade
+ * @grade       7 / 10
  */
 
-addStop = function ()
+// #1, 2, & 3
+let FoodTruck =
 {
-    let FoodTruck =
-        {
-            Name: "Lester's Taco Truck",
-            MPG: 20,
-            FoodType: "tacos",
-            Sales: 3000,
-            Stops: 12,
-            Employees: 4,
-        };
-
-    return Stops + 1;
+    Name: "Lester's Taco Truck",
+    MPG: 20,
+    FoodType: "tacos",
+    Sales: 3000,
+    Stops: 12,
+    Employees: 4,
+    addStop : function ()
+    {
+        FoodTruck.Stops++;
+    }
 };
+
+// #4
+FoodTruck.addStop();
