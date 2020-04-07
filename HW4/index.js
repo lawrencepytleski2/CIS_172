@@ -1,3 +1,13 @@
+/**
+ * HW 4
+ *
+ * @category    HW 4
+ * @author      Lawrence Pytleski
+ * @date
+ * @link
+    * @grade
+ */
+
 let PageManager = {
 
     init: function (){
@@ -9,11 +19,14 @@ let PageManager = {
 
         let myButton3 = document.getElementById('myButton3');
         myButton3.addEventListener('click', PageManager.onnButtonClick);
+
+        let select = document.getElementById('selectColor');
+        select.addEventListener('click', PageManager.onnButtonClick);
         },
 
-    onnButtonClick : function( event1 )
+    onnButtonClick : function( event )
     {
-        console.log('event:', event1);
+        console.log('event:', event);
         let textBox = document.getElementById('h1Text');
         let newText = textBox.value;
         let myH1 = document.getElementById('h1');
@@ -21,28 +34,19 @@ let PageManager = {
         // .append( STRING );
     },
 
-    onnButtonClick : function( event2 )
-    {
+    onnButtonClick : function( event2 ) {
         console.log('event:', event2);
         let appendBox = document.getElementById('appendBox');
-
         appendBox.append(lastName.value);
-
     },
 
-    onnButtonClick : function( event3 )
-    {
+    onnButtonClick : function( event3 ) {
         console.log(PageManager);
-    },
-
-    init: function (){
-        let select = document.getElementById('selectColor');
-        select.addEventListener( 'select', PageManager.updateColor );
     },
 
     updateColor: function ()
     {
-        let bodyElement = document.body;
+        var bodyElement = document.body;
 
         if( bodyElement.style.backgroundColor === "white" )
         {
@@ -61,10 +65,6 @@ let PageManager = {
             bodyElement.style.backgroundColor = "white";
         }
     }
-
-
-
-
 };
 
 window.onload = PageManager.init;
