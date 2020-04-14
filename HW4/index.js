@@ -40,7 +40,7 @@ let PageManager = {
         appendBox.append(lastName.value);
     },
 
-    onnButtonClick : function( event3 ) {
+    onnButtonClick2 : function( event3 ) {
         console.log(PageManager);
     },
 

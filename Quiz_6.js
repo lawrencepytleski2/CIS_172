@@ -5,12 +5,11 @@
  * @author      Chad Banks <crbanks1@hfcc.edu>
  * @author      YOUR NAME <YOUREMAIL@hawkmail.hfcc.edu>
  * @date        2020.04.09
- * @grade
+ * @grade       8.5 / 10
  */
 
 /**
 Use this form as a reference for all questions below, but complete all of them using JavaScript (No HTML).
-*/
 
 <form id="myCryptoForm" >
     <input type="text" id="email" >
@@ -30,23 +29,23 @@ Use this form as a reference for all questions below, but complete all of them u
 
 init: function (){
     let emailName = document.getElementById('email');
-    emailName.addEventListener( "blur", validateAndSaveEmail.validateName );
+    emailName.addEventListener( "blur", validateAndSaveEmail );
 }
 
-// 3 pts
+// 2 / 3 pts
 // 2. Create a function called validateAndSaveEmail that checks the value of the email text box.
 //          If the value is less than 5 characters then throw an error.
 //          If the value does not contain an @ or . then throw an error.
 //          The function does not need to save the email or do anything else.
 
-validateAndSaveEmail : function( event )
+function validateAndSaveEmail( event )
 {
     let nameInput = document.getElementById('email');
 
     //console.log("Event:", event);
     //console.log("Value Length:", event.target.value.length);
 
-    if( typeof nameInput.value !== "@" || "." )
+    if( nameInput.indexOf("@") !== -1 && nameInput.indexOf(".") !== -1 )
     {
         alert('Email does not contain "@" or "."');
         return false;
@@ -64,17 +63,17 @@ validateAndSaveEmail : function( event )
 
     init: function (){
         let favCoin = document.getElementById('favoriteCoin');
-        favCoin.addEventListener( "change", onFavCoinChange.validateName );
+        favCoin.addEventListener( "change", onFavCoinChange );
     }
 
-// 3 pts
+// 2.5 / 3 pts
 // 4. Create a function called onFavCoinChange that checks the value of the select drop down.
 //          If the value is Bitcoin, console.log this message "The coin to rule them all!"
 //          If the value is Ethereum, console.log this message "Solidity smart contracts for the win!"
 //          If the value is XRP, console.log this message "Bold move cotton!"
 //          If the value is Other, console.log this message "You may be making a huge mistake..."
 
-    let onFavCoinChange = nameInput.value.indexOf(" ");
+    let onFavCoinChange = nameInput.value;
 
     if( onFavCoinChange === "BitCoin" )
     {
