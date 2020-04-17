@@ -4,7 +4,7 @@
  * @category    HW 6
  * @author      Lawrence Pytleski
  * @date
- * @link
+ * @link     ljpytleski@hawkmail.hfcc.edu
     * @grade
  */
 
@@ -14,7 +14,7 @@ let PageHandler = {
     isHidden : true,
 
     init: function () {
-
+        try {
         console.log("Page has loaded!");
 
         PageHandler.pageDiv = $('#JohnCena');
@@ -24,10 +24,18 @@ let PageHandler = {
         showDiv.click(PageHandler.onReturnButtonClick);
 
         $('#jQueryButton').click( PageHandler.onReturnButtonClick );
+        }
+
+    catch(err) {
+        console.error("Error!");
+        throw "Error!";
+        }
     },
 
     onReturnButtonClick : function( event )
     {
+        try {
+
         if(PageHandler.isHidden)
         {
             PageHandler.pageDiv.show();
@@ -38,14 +46,25 @@ let PageHandler = {
             PageHandler.pageDiv.hide();
             PageHandler.isHidden = true;
         }
+        }
+        catch(err) {
+            console.error("Error!");
+            throw "Error!";
+        }
     },
 
     onReturnButtonClick : function( event )
     {
-        $('a[href=http://www.google.com]').click(function(){
-            window.open(this.href);
-            return false;
-        });
+        try {
+            $('a[href=http://www.google.com]').click(function () {
+                window.open(this.href);
+                return false;
+            });
+        }
+        catch(err) {
+            console.error("Error!");
+            throw "Error!";
+        }
     }
 
 
