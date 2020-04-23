@@ -11,20 +11,20 @@
 let PageManager = {
 
     init: function (){
-        let myButton = document.getElementById('myButton');
-        myButton.addEventListener( 'click', PageManager.onnButtonClick);
+        let myButton1 = document.getElementById('myButton1');
+        myButton1.addEventListener( 'click', PageManager.onButtonClick);
 
         let myButton2 = document.getElementById('myButton2');
-        myButton2.addEventListener('click', PageManager.onnButtonClick);
+        myButton2.addEventListener('click', PageManager.onButtonClick);
 
         let myButton3 = document.getElementById('myButton3');
-        myButton3.addEventListener('click', PageManager.onnButtonClick);
+        myButton3.addEventListener('click', PageManager.onButtonClick);
 
         let select = document.getElementById('selectColor');
-        select.addEventListener('click', PageManager.onnButtonClick);
+        select.addEventListener('click', PageManager.onButtonClick);
         },
 
-    onnButtonClick : function( event )
+    onButtonClick : function( event )
     {
         console.log('event:', event);
         let textBox = document.getElementById('h1Text');
@@ -34,13 +34,13 @@ let PageManager = {
         // .append( STRING );
     },
 
-    onnButtonClick : function( event2 ) {
-        console.log('event:', event2);
+    onButtonClick : function( event ) {
+        console.log('event:', event);
         let appendBox = document.getElementById('appendBox');
         appendBox.append(lastName.value);
     },
 
-    onnButtonClick2 : function( event3 ) {
+    onButtonClick : function( event ) {
         console.log(PageManager);
     },
 
