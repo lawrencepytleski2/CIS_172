@@ -9,6 +9,7 @@
  * @grade       10 / 10
  */
 
+
 let myName = "Larry Pytleski";
 let myMajor = "Web Development";
 let funFact = "I play guitar";

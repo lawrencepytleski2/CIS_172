@@ -68,3 +68,5 @@ let PageManager = {
 };
 
 window.onload = PageManager.init;
+
+let selectBox = document.getElementById('bgcolor');
