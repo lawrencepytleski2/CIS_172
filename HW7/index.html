@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW4</title>
+    <script src="index.js" ></script>
+</head>
+<body>
+<h1 id="h1" >Homework 7</h1>
+
+<button id="myButton1" >Button 1</button>
+<br><br>
+<button id="myButton2" >Button 2</button>
+<br><br>
+<button id="myButton3" >Button 3</button>
+<br><br>
+<button id="Clicker" >Button 4</button>
+<br><br>
+<form action="index.html" method="GET" id="contactForm" >
+    <label for="h1Text" >First Name:</label>
+    <input type="text" id="h1Text" name="firstName" placeholder="Enter name" >
+    <br><br>
+    <label for="lastName" >Last Name:</label>
+    <input type="text" id="lastName" name="lastName" placeholder="Enter name" >
+    <br><br>
+    <select onchange="PageManager.updateColor()" id="background-color" name="background-color" >
+        <option>-- Select a color --</option>
+        <option>White</option>
+        <option>Red</option>
+        <option>Blue</option>
+        <option>Green</option>
+    </select>
+</form>
+<br>
+<div id="appendBox" >
+    <label for="lastName" >Append Example:</label>
+</div>
+</body>
+</html>
