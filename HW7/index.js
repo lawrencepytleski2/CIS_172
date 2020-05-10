@@ -4,7 +4,7 @@
  * @category    HW 7
  * @author      Lawrence Pytleski
  * @date
- * @link
+ * @link  ljpytleski@hawkmail.hfcc.edu
     * @grade
  */
 
@@ -30,7 +30,13 @@ let PageManager = {
             localStorage.setItem( "background-color", "white" );
 
         let myButton4 = document.getElementById('Clicker');
-        myButton4.addEventListener('click', localStorage.clicks;
+        myButton4.addEventListener('click', PageManager.onClick4);
+    },
+
+    onClick4 : function( event )
+    {
+        if(clicks)
+            localStorage.setItem( "background-color", "white" );
     },
 
     onButtonClick1 : function( event )
@@ -75,7 +81,7 @@ let PageManager = {
         }
     },
 
-     setCookie : function(name, class, email, date, movie)
+     setCookie : function(name, myClass, email, date, movie)
         {
 
             document.cookie = "Name: Lawrence Pytleski";
@@ -84,13 +90,12 @@ let PageManager = {
             document.cookie = "Date: ";
             document.cookie = "Movie: The Big Lebowski";
 
-            document.cookie = name + " , " + class + " , " + email + " , " + date + " , " + movie;
+            document.cookie = name + " , " + myClass + " , " + email + " , " + date + " , " + movie;
         },
         getCookies : function()
         {
             return document.cookie;
         }
-    }
 };
 
 window.onload = PageManager.init;
