@@ -35,8 +35,17 @@ let PageManager = {
 
     onClick4 : function( event )
     {
+        let clicks = localStorage.getItem( "clicks" );
+        let clickerLabel = document.getElementById('clickerLabel');
+
         if(clicks)
-            localStorage.setItem( "background-color", "white" );
+            clicks++;
+        else {
+            clicks = 1;
+        }
+
+        localStorage.setItem( "clicks", clicks);
+        clickerLabel.innerHTML = 'Clicks: '+ clicks;
     },
 
     onButtonClick1 : function( event )
@@ -87,7 +96,7 @@ let PageManager = {
             document.cookie = "Name: Lawrence Pytleski";
             document.cookie = "Class: CIS-172";
             document.cookie = "Email: ljpytleski@hawkmail.hfcc.edu";
-            document.cookie = "Date: ";
+            document.cookie = "Date: ", new Date();
             document.cookie = "Movie: The Big Lebowski";
 
             document.cookie = name + " , " + myClass + " , " + email + " , " + date + " , " + movie;
