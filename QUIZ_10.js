@@ -5,7 +5,7 @@
  *
  * @category    Quiz 10
  * @author      Chad Banks <crbanks1@hfcc.edu>
- * @author      YOUR NAME <YOUREMAIL@hawkmail.hfcc.edu>
+ * @author      LAWRENCE PYTLESKI <ljpytleski@hawkmail.hfcc.edu>
  * @date        2020.05.07
  * @grade
  */
