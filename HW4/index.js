@@ -4,8 +4,7 @@
  * @category    HW 4
  * @author      Lawrence Pytleski
  * @date
- * @link
-    * @grade
+ * @grade       10 / 10
  */
 
 let PageManager = {

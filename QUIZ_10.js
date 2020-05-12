@@ -7,7 +7,7 @@
  * @author      Chad Banks <crbanks1@hfcc.edu>
  * @author      LAWRENCE PYTLESKI <ljpytleski@hawkmail.hfcc.edu>
  * @date        2020.05.07
- * @grade
+ * @grade       7 / 10
  */
 
 // 1 pts
@@ -16,12 +16,12 @@
 
 let discordUser = JSON.parse('{"uid":64029,""name":"Jon","age":47,"type":"paid","games":["D&D","Halo","Mario"]}');
 
-// 2 pts
+// 1 / 2 pts
 // 2. Load the discordUser object created above into a localStorage object called currentUser.
 
-let currentUser = localStorage.getItem('discordUser');
+let currentUser = localStorage.setItem('currentUser', discordUser);
 
-// 4 pts
+// 2 / 4 pts
 // 3. Check to make sure the uid and age properties of the discordUser object are numbers.
 //          Also check to ensure the name and type properties are strings.
 //          If any of these are false, then throw an Error.
@@ -33,13 +33,13 @@ validateName : function( event )
     if( 'uid', 'age' !== "number" )
     {
         alert('UID & Age should be a number!');
-        return false;
+        throw new Error('UID & Age should be a number!');
     }
 
     else if( 'name', 'type' !== "string")
     {
         alert('Name & Type should be a string!');
-        return false;
+        throw new Error('Name & Type should be a string!');
     }
 
 // 1 pts
