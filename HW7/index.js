@@ -30,22 +30,7 @@ let PageManager = {
             localStorage.setItem( "background-color", "white" );
 
         let myButton4 = document.getElementById('Clicker');
-        myButton4.addEventListener('click', PageManager.onClick4);
-    },
-
-    onClick4 : function( event )
-    {
-        let clicks = localStorage.getItem( "clicks" );
-        let clickerLabel = document.getElementById('clickerLabel');
-
-        if(clicks)
-            clicks++;
-        else {
-            clicks = 1;
-        }
-
-        localStorage.setItem( "clicks", clicks);
-        clickerLabel.innerHTML = 'Clicks: '+ clicks;
+        myButton4.addEventListener('click', PageManager.onButtonClick4);
     },
 
     onButtonClick1 : function( event )
@@ -66,6 +51,23 @@ let PageManager = {
 
     onButtonClick3 : function( event ) {
         console.log(PageManager);
+    },
+
+    onButtonClick4 : function( event )
+    {
+        let clicks = localStorage.getItem( "clicks" );
+        let clickerLabel = document.getElementById('clickerLabel');
+
+        if(clicks){
+            clicks++;
+        }
+        else {
+            clicks = 1;
+        }
+
+        localStorage.setItem( "clicks", clicks);
+        clickerLabel.innerHTML = 'Clicks: '+ clicks;
+
     },
 
     updateColor : function ( event )
