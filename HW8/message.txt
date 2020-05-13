@@ -1,7 +1,7 @@
-<h1>AJAX</h1>
-<p>Lorem ipsum dolor sit amet, quo id sensibus elaboraret constituam,</p>
-<p>an ornatus scribentur nam, ocurreret signiferumque ad sit. Per alii audire</p>
-<p>recteque id. Mea ad magna causae facilisi, id debet placerat constituam nec.</p>
-<p>Ea ferri debet qui, te omnis contentiones sit. No mea graece latine, eam putent</p>
-<p>noster deseruisse et, ea sea malis regione. Mea id novum voluptua, molestie</p>
-<p>sensibus te mel.</p>
+AJAX
+Lorem ipsum dolor sit amet, quo id sensibus elaboraret constituam,
+an ornatus scribentur nam, ocurreret signiferumque ad sit. Per alii audire
+recteque id. Mea ad magna causae facilisi, id debet placerat constituam nec.
+Ea ferri debet qui, te omnis contentiones sit. No mea graece latine, eam putent
+noster deseruisse et, ea sea malis regione. Mea id novum voluptua, molestie
+sensibus te mel.

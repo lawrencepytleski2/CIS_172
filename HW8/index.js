@@ -23,35 +23,50 @@ let PageManager = {
     },
 
     onReadFile: function (event) {
-        let readBtn = new XMLHttpRequest();
-        readBtn.onReadFile = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("output").innerHTML = this.responseText;
+        $.ajax({
+            url: "message.txt",
+            dataType: 'text',
+            success: function (data) {
+                console.log(data);
             }
-        };
-        readBtn.open("GET", "message.txt", true);
-        readBtn.send();
+        });
+
+        let appendBox = document.getElementById('output');
+        appendBox.append($.ajax.value);
     },
 
     onAPIRequest: function (event) {
+        let requestString = document.getElementById('dataBuilder').value;
 
-            let requestString = document.getElementById('output').value;
+        console.log("Request Object String: ", requestString);
+        console.log("Sending AJAX Request....");
 
-            console.log( "Request Object String: ", requestString );
-            console.log( "Sending AJAX Request...." );
+        try {
+            PageManager.makeRequest('https://cislinux.hfcc.edu/~crbanks1/api.php', JSON.parse(requestString));
+        } catch (e) {
+            console.error("Request Error:", e.message);
+        }
+    },
+    makeRequest: function (url, data) {
+        $.ajax({method: "POST", url: url, data: data, complete: PageManager.getResponse});
+    },
+    getResponse: function (response) {
+        console.log("Response:", response.responseText);
 
-            try {
-                PageManager.makeRequest('https://cislinux.hfcc.edu/~crbanks1/api.php', JSON.parse(requestString));
+        let closeButton = '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
+
+        try {
+            let json = JSON.parse(response.responseText);
+
+            if (json.statusCode == '200') {
+                $('#alerts').append('<div class="alert alert-success alert-dismissible fade show text-left" role="alert">' + json.message + ' ' + closeButton + '</div>');
+            } else if (json.statusCode == '500') {
+                $('#alerts').append('<div class="alert alert-danger alert-dismissible fade show text-left" role="alert">' + json.message + ' ' + closeButton + '</div>');
             }
-            catch( e )
-            {
-                console.error( "Request Error:" );
-            }
-        },
-        makeRequest: function( url, data )
-        {
-            $.ajax( {method: "POST", url: url, data: data, complete: PageManager.onAPIRequest} );
-        },
-    }
+        } catch (e) {
+            console.error("Response Error:", e.message);
+        }
+    },
+}
 
     window.onload = PageManager.init;
