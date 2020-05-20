@@ -5,7 +5,7 @@
  * @author      Lawrence Pytleski
  * @date
  * @link  ljpytleski@hawkmail.hfcc.edu
-    * @grade
+    * @grade 10 / 10
  */
 
 let PageManager = {

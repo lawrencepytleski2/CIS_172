@@ -7,7 +7,7 @@
  * @category    Final
  * @author      LAWRENCE PYTLESKI (ljpytleski@hawkmail.hfcc.edu)
  * @date        2020.05.12
- * @grade       
+ * @grade       80 / 100
  *
  **/
 
@@ -59,9 +59,14 @@ var pagejs = {
             // Perform Actual Visible Update
             pagejs.updateDisplay( pagejs.carcolor );
 
-            if( "car-color" !== "White", "Red", "Blue" )
+            switch(pagejs.carcolor)
             {
-                throw new Error('Car color should be white, red, or blue!');
+                case 'white':
+                    console.log('white');
+                    break;
+                // etc etc
+                default:
+                    throw new Error('No color');
             }
         }
         catch(e)
@@ -72,8 +77,8 @@ var pagejs = {
     onButtonClick: function()
     {
         console.log("BUY BUTTON!");
-        $.ajax( {method: "POST", url: 'https://nottesla.com/api/v2/page/metrics', complete: pagejs.onButtonClick} );
-        localStorage.setItem( "car-color", pagejs.onButtonClick );
+        $.ajax( {method: "POST", url: 'https://nottesla.com/api/v2/page/metrics', data:pagejs.metric, complete: pagejs.onButtonClick} );
+        localStorage.setItem( "car-color", pagejs.metric );
     }
 };
 
